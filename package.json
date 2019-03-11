@@ -4,7 +4,7 @@
   "description": "Sample Allure 2 project based on Mocha Reporter",
   "scripts": {
     "clean": "rimraf ./report ./allure-results",
-    "test": "tsc && yarn clean && sleep 1 && multi='progress=- mocha-allure2-reporter=-' mocha -R mocha-multi --opts ./mocha.opts",
+    "test": "tsc && yarn clean && mocha --opts ./mocha.opts",
     "allure-report": "allure generate ./allure-results -c && allure open",
     "tslint-fix": "tslint --fix --project .",
     "tslint": "tslint --project .",
